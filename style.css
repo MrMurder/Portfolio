@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: contents;
+    padding: 20px;
+}
+
+header {
+    background-image: url("img/bg.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*padding-top: 102px;*/
+}
+
+/*    Navigation bar styles start    */
+
+#menu_toggle {
+    opacity: 0;
+
+}
+
+@media screen and (min-width: 600px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    #wide_screen {
+        background-color: transparent;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+
+    #wide_screen a {
+        float: right;
+        display: block;
+        font-family: 'IM Fell English SC', serif;
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 10px 16px;
+        text-align: center;
+        color: darkgray;
+        background-color: #190000;
+
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #wide_screen {
+        display: none;
+    }
+
+    #menu_toggle:checked ~ .menu_btn > span {
+        transform: rotate(45deg);
+
+    }
+
+    #menu_toggle:checked ~ .menu_btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu_toggle:checked ~ .menu_btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu_toggle:checked ~ .menu_box {
+        visibility: visible;
+        left: 0;
+    }
+
+    .menu_btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+
+        width: 26px;
+        height: 26px;
+
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after {
+        display: block;
+        position: absolute;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu_btn > span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu_btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .menu_box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        z-index: 1;
+
+        width: 100%;
+
+
+        margin: 0;
+        padding: 45px 0;
+
+        list-style: none;
+
+        background-color: #ECEFF1;
+        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+
+        transition-duration: .25s;
+    }
+
+    .menu_item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu_item:hover {
+        background-color: #CFD8DC;
+    }
+}
+
+h1 {
+    width: 90vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: 'IM Fell English SC', serif;
+    color: darkgray;
+    font-size: 2em;
+}
+
+
+#about {
+    background-image: url("img/bg_about.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Indie Flower', cursive;
+}
+
+#about p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2vw;
+    text-shadow: 0 1px 1px black;
+}
+
+#about h2 {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+    font-size: 2em;
+    text-shadow: 0 0 1px black;
+    padding-top: 20px;
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    font-family: 'IM Fell English SC', serif;
+    padding-top: 20px;
+    font-size: 1.5em;
+}
+
+#avatar {
+    width: 20%;
+    float: left;
+    margin: 0 20px 20px 20px;
+
+}
+
+
+.open-window {
+    width: fit-content;
+    margin-top: 20px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2vw;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+
+}
+
+.open-window:hover {
+    box-shadow: 7px 7px 5px black;
+    cursor: pointer;
+
+}
+
+#portfolio {
+    height: 100%;
+    display: inline-table;
+    background-color: darkseagreen;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    text-align: center;
+    width: 40%;
+    font-size: 20px;
+    margin: 30px 20px 10px 20px;
+    font-family: 'IM Fell English SC', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#portfolio img {
+    width: 100%;
+    box-shadow: 7px 7px 10px black;
+}
+
+#portfolio h2 {
+    letter-spacing: 10px;
+    font-size: 35px;
+    color: #190000;
+    text-shadow: 5px 5px 10px black;
+}
+
+#contacts {
+    height: auto;
+    background-color: #190000;
+    color: white;
+    font-size: 20px;
+    font-family: 'IM Fell English SC', serif;
+}
+
+/*#contacts img, #contacts img:hover {*/
+/*    margin: 5px 10px 5px 10px;*/
+/*    width: 10%;*/
+/*    cursor: pointer;*/
+
+/*}*/
+
+#contacts img {
+    display: flex;
+    width: 2.5em;
+}
+
+#contacts text {
+    position: relative;
+    bottom: 35px;
+}
+
+.container_contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer {
+    background-color: #190000;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Staatliches', cursive;
+}
+
+#modal-window {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 50%;
+}
+
+.close {
+    color: white;
+    padding: 2%;
+    background-color: black;
+    font-size: 25px;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+.close:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px gray;
+    transition-duration: 1s;
+}
+
+#modal_p {
+    font-family: cursive;
+    font-size: larger;
+    margin: 10px 10px 30px 10px;
+
+}
+
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Indie+Flower&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="home" class="header">
+    <nav class="nav" id="topNav">
+        <div id="wide_screen">
+            <a href="#contacts">CONTACTS</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#about">ABOUT ME</a>
+            <a class="active" href="#home">HOME</a>
+        </div>
+
+
+        <div class="hamburger">
+            <input id="menu_toggle" type="checkbox"/>
+            <label class="menu_btn" for="menu_toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu_box">
+                <li><a class="menu_item" href="#home">HOME</a></li>
+                <li><a class="menu_item" href="#about">ABOUT ME</a></li>
+                <li><a class="menu_item" href="#portfolio">PORTFOLIO</a></li>
+                <li><a class="menu_item" href="#contacts">CONTACTS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Karpinskiy Yaroslav<br> <i>Full Stack Developer</i></h1>
+</header>
+<section id="about">
+    <h2>About me</h2>
+    <img id="avatar" src="img/Uporotyi_lis.jpeg" alt="Упоротый лис">
+
+    <p>Hi, my name is Yaroslav, and I'm interested in IT.<br>
+        For me, programming is not just a job, it's hobby.<br>
+        Most of all I like the development process, the way how the programs work.<br>
+        I'm open to new knowledge, I like to study new technologies and apple them<br>
+        in practice<br>
+        <b>Skills:</b> HTML, CSS, JavaScript, Java
+    </p>
+</section>
+<section id="portfolio">
+    <h2>PORTFOLIO</h2>
+
+    <div class="container">
+
+        <div class="item">
+            <img src="img/Flashcard.png" alt="Flashcard">
+            <button class="open-window" onclick="openWindow(this)">Flashcard</button>
+        </div>
+
+
+        <div class="item">
+            <img src="img/Virtual_piano.png" alt="Virtual Piano">
+            <button class="open-window" onclick="openWindow(this)">Virtual Piano</button>
+        </div>
+
+
+        <div class="item">
+            <img src="img/Case_converter.png" alt="Case converter">
+            <button class="open-window" onclick="openWindow(this)">Case converter</button>
+        </div>
+
+
+        <div class="item">
+            <img src="img/To-Do_list.png" alt="To-Do List">
+            <button class="open-window" onclick="openWindow(this)">To-Do List</button>
+        </div>
+
+
+        <div class="item">
+            <img src="img/Open_space.png" alt="Open space">
+            <button class="open-window" onclick="openWindow(this)">Open space</button>
+        </div>
+
+
+        <div id="modal-window" class="window">
+            <div id="modal-content" class="modal-content">
+                <h2 id="modal_h">Item name</h2>
+                <p id="modal_p">Some text in the modal</p>
+                <button class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="contacts">
+    <h2>C O N T A C T S</h2><br>
+    <div class="container_contacts">
+        <a href="tel: +380630375685"><img src="icons/phone.ico" alt="phone icon"></a><br>
+        <a href="mailto: karp.jaroslav@gmail.com"><img src="icons/email.png" alt="mail icon"> </a><br>
+        <a href="skype://karp.jaroslav"><img src="icons/skype.png" alt="skype icon"></a><br>
+        <a href="https://t.me/MrMurder" target="_blank"><img src="icons/telegram.png" alt="telegram icon"></a><br>
+        <a href="https://linkedin.com/in/karpinskiy-yaroslav" target="_blank"><img src="icons/linkedin.png"
+                                                                                   alt="linkedin icon"></a>
+        <a href="https://github.com/MrMurder" target="_blank"><img src="icons/PngItem_1280311.png"
+                                                                   alt="github icon"></a><br>
+
+    </div>
+</section>
+<footer>THERE IS NOTHING ELSE FOR NOW... 2021</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
